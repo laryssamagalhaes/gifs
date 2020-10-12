@@ -77,7 +77,8 @@ const App = () => {
               <Gif
                 key={index}
                 embedUrl={gif.embed_url}
-                imageURL={gif.images.preview_webp.url}
+                webpURL={gif.images.preview_webp.url}
+                gifUrl={gif.images.preview_gif.url}
                 alt={gif.title}
               />
             );

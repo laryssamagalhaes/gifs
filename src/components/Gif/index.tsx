@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { Container, Img, Overflow, Span, CopyIcon, CheckIcon } from "./styles";
 
 type PropsType = {
-  imageURL: string;
+  webpURL: string;
+  gifUrl: string;
   alt: string;
   embedUrl: string;
 };
@@ -13,7 +14,7 @@ enum StatusEnum {
   COPYING_TO_CLIPBOARD,
 }
 
-const Gif = ({ imageURL, alt, embedUrl }: PropsType) => {
+const Gif = ({ gifUrl, webpURL, alt, embedUrl }: PropsType) => {
   const [status, setStaus] = useState(StatusEnum.IDLE);
   const timeOut = 500;
 
@@ -27,7 +28,10 @@ const Gif = ({ imageURL, alt, embedUrl }: PropsType) => {
 
   return (
     <Container data-testid="gif-container">
-      <Img src={imageURL} alt={alt} loading="lazy" />
+      <picture>
+        <source type="image/webp" srcSet={webpURL} />
+        <Img src={gifUrl} alt={alt} loading="lazy" />
+      </picture>
       <Overflow>
         <Span>{alt}</Span>
         {status === StatusEnum.IDLE ? (
