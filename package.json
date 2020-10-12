@@ -6,14 +6,24 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.14",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/node": "^14.11.8",
+    "@types/react": "^16.9.51",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.4",
+    "lodash.debounce": "^4.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-masonry-css": "^1.0.14",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.2.0",
+    "typescript": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^7.24.5",
+    "@types/testing-library__dom": "^7.5.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
