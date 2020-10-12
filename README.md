@@ -7,7 +7,7 @@ I used the [Giphy API](https://developers.giphy.com/docs/api) to consume data an
 The current gifs are trendings, you can also search with a specific term.
 **eg:** Dogs, cats, hallowen...
 
-If you want to see the project in production: https://giphy-onebrief.vercel.app/
+If you want to see the project in production: https://giphy-onebrief.laryssamagal.vercel.app
 
 ## Available scripts
 
